@@ -1,0 +1,8 @@
+{
+  "errors" : [{      
+      "code" : 10001 ,
+      "message" : "The request is invalid or not properly formed.",
+      "description" : "The client sent too many requests and server is not able to serve them all at the moment"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+#%RAML 1.0 Trait
+
+description: Trait specifying that HTTP method may return successful '204 - No Content' HTTP status code.
+
+responses: 
+  204:
+    description: No Content - request successful, but no content returned (by design). The response may contain headers, but it won't contain any message-body.

@@ -1,0 +1,27 @@
+#%RAML 1.0 Trait
+
+description: Cacheable resource trait. Enables resource caching in client or proxy applications by sending Date, Cache-Control, Expires or Vary HTTP headers in API response.
+
+responses:
+  200:
+    headers:
+      Date:
+        description: The date and time that the message was originated (in "HTTP-date" format).
+        required: false
+        type: datetime
+        format: rfc2616
+        example: Sun, 01 Jan 2017 09:13:42 GMT
+      Cache-Control:
+        description: Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds.
+        required: false
+        example: private, max-age=3600
+      Expires:
+        description: The date/time after which the response is considered stale (in "HTTP-date" format). If there is a Cache-Control header with the "max-age" or "s-max-age" directive in the response, the Expires header should be ignored.
+        type: datetime
+        required: false
+        format: rfc2616
+        example: Sun, 01 Jan 2017 23:59:59 GMT
+      Vary:
+        description: Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server.
+        required: false
+        example: Accept-Language

@@ -1,0 +1,17 @@
+#%RAML 1.0 Trait
+
+description: Trait defining that resource is pageable, i.e., enables clients to request server to respond with sub-set of collection, by sending 'offset' and/or 'limit' query parameters.
+
+queryParameters: 
+  offset: 
+    description: Defines the starting point of the page to be searched (number of records to be skipped).
+    type: integer
+    required: false
+    default: 0
+    minimum: 0
+  limit: 
+    description: Defines the number of records to be rerieved.
+    required: false
+    type: integer
+    default: 50
+    minimum: 1

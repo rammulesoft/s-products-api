@@ -1,0 +1,9 @@
+#%RAML 1.0 DataType
+
+description: An API response meta-data. Contains supplementary information about the data being returned in the API response.
+properties:
+  messages:
+    description: Messages related to request processing or response data - any additional information or warnings to be returned in the case of a successful API call.
+    required: false
+    type: array
+    items: !include type-message.raml

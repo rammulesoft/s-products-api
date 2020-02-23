@@ -1,0 +1,15 @@
+#%RAML 1.0 DataType
+
+description: Object containing references to the source of the message.
+type: object
+properties:
+  pointer:
+    description: A JSON pointer to the associated entity in the request document.
+    required: false
+    type: string
+    example: /solicitor/panelNumber
+  parameter:
+    description: Indicates which query parameter caused the error.
+    type: string
+    required: false
+    example: type

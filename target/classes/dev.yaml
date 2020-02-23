@@ -1,0 +1,20 @@
+
+http:
+ host: "0.0.0.0"
+ port: "8081"
+ listener: "/api/*"
+ 
+basicAuth:
+  user: "user"
+  password: "HELLOWORLD"
+  
+app:
+ id: "34475456"
+  
+#nav:
+# domain: "ABTDEV"
+# user: "ABDEVMULESOFT"
+# password: "![fqvNYuRD96w6attAd2j1Zg==]"
+# soapUrl: "http://dnav01:7047/ABDEVSTUSOC/WS"
+# odataUrl: "http://dnav01:7047/ABDEVSTUSOC/OData"
+# company: "CAOC"

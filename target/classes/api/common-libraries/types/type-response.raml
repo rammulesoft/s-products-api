@@ -1,0 +1,29 @@
+#%RAML 1.0 DataType
+
+description: |
+    An API response.
+  
+    The API response will be either a SUCCESS or an ERROR. A partial success or warning scenario will be treated as a Success with embedded messages in the meta data. A full success may not have messages.
+    The API response will contain at least one of the following top level members.
+properties:
+  meta: 
+    type: !include type-metadata.raml
+    required: false
+  data:
+    type: object | object[]
+    required: false
+    description: |
+      Contains the primary data to be returned as the API response.
+      
+      It can be:
+      * single object if response is being sent for a single item like /customers/{customerId}.
+      * collection (array) of objects if the response is being sent for a collection like /customers
+      
+      It will not be returned in case of error.
+  errors:
+    description: |
+      Contains one or more error messages and is mutually exclusive with the data item.
+      This will not be returned in success scenarios.
+    required: false
+    type: array
+    items: !include type-message.raml

@@ -1,0 +1,13 @@
+#%RAML 1.0 Trait
+
+description: Trait specifying standard HTTP methods' headers (context) that clients may, should or must provide in request while calling API, e.g., Correlation-Id.
+
+headers:
+  Correlation-ID:
+    description: An identifier for the current call chain that can be used to tie together log entries on multiple layers (e.g. client, server, mainframe). This identifier must be designed to be unique across all applications.
+    type: string
+    pattern: ^[a-zA-Z0-9-+/=_]{16,64}$
+    required: false
+    example: 644e1dd7-2a7f-18fb-b8ed-ed78c3F92c2b
+    minLength: 16
+    maxLength: 64

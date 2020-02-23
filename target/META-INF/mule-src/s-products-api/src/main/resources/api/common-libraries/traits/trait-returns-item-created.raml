@@ -1,0 +1,12 @@
+#%RAML 1.0 Trait
+
+description: Trait specifying that HTTP method may return successful '201 - Created' HTTP status code.
+
+responses: 
+  201:
+    description: Created - request successful, <<resourcePathName|!singularize>> has been created. Response body may contain an entity corresponding to the created resource.
+    headers:
+      Location:
+        description: A location of a newly created resource.
+        required: false
+        example: <<resourcePath>>/123

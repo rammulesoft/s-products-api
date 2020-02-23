@@ -1,0 +1,9 @@
+{
+  "errors" : [{
+      
+      "code" : 1006,
+      "message" : "The request failed due to an internal error.",
+      "description": "error description"
+    }
+  ]
+}

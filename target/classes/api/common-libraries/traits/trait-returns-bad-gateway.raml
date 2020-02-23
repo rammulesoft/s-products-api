@@ -1,0 +1,7 @@
+#%RAML 1.0 Trait
+
+description: Trait specifying that HTTP method acts as a gateway (proxy) therefore may return a specific gateway-related error - '502 Bad Gateway'.
+    
+responses:
+  502:
+    description: Bad Gateway - gateway is available but backend service is not. The server, while acting as a gateway or proxy, received an invalid response from the upstream server it accessed in attempting to fulfill the request.

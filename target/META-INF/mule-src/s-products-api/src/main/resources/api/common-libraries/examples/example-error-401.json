@@ -1,0 +1,8 @@
+{
+  "errors" : [{     
+      "code" : 1002,
+      "message" : "The user could not be authenticated for this request.",
+      "description" : "The client sent too many requests and server is not able to serve them all at the moment"
+    }
+  ]
+}

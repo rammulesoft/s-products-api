@@ -1,0 +1,27 @@
+#%RAML 1.0 DataType
+
+description: Message details - additional operation execution information.
+type: object
+properties:
+  id:
+    description: Generated message identifier for particular request, helping to locate server logs.
+    required: false
+    type: string
+    example: 9709-4675-2456-7801
+  code:
+    description: Machine readable, unique code of the message related to particular case within operation execution.
+    type: integer
+    example: 10001
+  title:
+    required: false
+    description: Short description of the error. Not for displaying purposes.
+    type: string
+    example: The authorization credentials required for this request are invalid.
+  detail:
+    description: Provides additional low-level details about the error to assist with troubleshooting. Not for displaying purposes.
+    required: false
+    type: string
+    example: SQLException found while trying to establish the connection with table TUKCULO.
+  source: 
+    type: !include type-source.raml
+    required: false

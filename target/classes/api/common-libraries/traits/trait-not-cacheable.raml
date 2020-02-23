@@ -1,0 +1,10 @@
+#%RAML 1.0 Trait
+description: Not-Cacheable resource trait. Tells API consumer that the response must not be cached.
+
+responses:
+  200:
+    headers:
+      Cache-Control:
+        description: Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds.
+        default: no-cache, no-store, must-revalidate
+        example: no-cache, no-store, must-revalidate

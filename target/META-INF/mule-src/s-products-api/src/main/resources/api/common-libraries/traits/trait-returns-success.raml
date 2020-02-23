@@ -1,0 +1,7 @@
+#%RAML 1.0 Trait
+
+description: Trait describing that HTTP method may return '200 - Success' response.
+
+responses: 
+  200:
+    description: OK - <<methodName | !uppercase>> request processed successfully, response body contains an entity corresponding to the requested resource.

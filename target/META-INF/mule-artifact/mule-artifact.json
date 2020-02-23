@@ -1,0 +1,55 @@
+{
+  "configs": [
+    "common-logger.xml",
+    "common-configs.xml",
+    "s-products-api.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:s-products-api:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.2.2",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "log4j2.xml",
+        "s-products-api.xml",
+        "sm-common-utils-m4.properties",
+        "dev.yaml",
+        "common-configs.xml",
+        "common-logger.xml",
+        "api/docs/doc-api.md",
+        "api/common-libraries/types/type-response.raml",
+        "api/common-libraries/types/type-message.raml",
+        "api/common-libraries/types/type-source.raml",
+        "api/common-libraries/types/type-metadata.raml",
+        "api/common-libraries/security-schemes/security-scheme-oauth-2.raml",
+        "api/common-libraries/traits/trait-cacheable.raml",
+        "api/common-libraries/traits/trait-returns-not-found.raml",
+        "api/common-libraries/traits/trait-returns-common-errors.raml",
+        "api/common-libraries/traits/trait-returns-no-content.raml",
+        "api/common-libraries/traits/trait-pageable.raml",
+        "api/common-libraries/traits/trait-not-cacheable.raml",
+        "api/common-libraries/traits/trait-returns-success.raml",
+        "api/common-libraries/traits/trait-returns-item-created.raml",
+        "api/common-libraries/traits/trait-returns-bad-gateway.raml",
+        "api/common-libraries/traits/trait-expects-context.raml",
+        "api/common-libraries/examples/example-error-401.json",
+        "api/common-libraries/examples/example-error-429.json",
+        "api/common-libraries/examples/example-error-404.json",
+        "api/common-libraries/examples/example-error-500.json",
+        "api/common-libraries/examples/example-error-403.json",
+        "api/common-libraries/examples/example-error-400-bad-request.json",
+        "api/examples/get-product-data-success-200.json",
+        "api/examples/example.json",
+        "api/s-products-api.raml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

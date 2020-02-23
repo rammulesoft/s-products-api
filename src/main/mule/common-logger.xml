@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<sub-flow name="call-entry-logger-flow" doc:id="b2d10108-fb5d-441f-965a-9145fea4238f" >
+		<logger level="INFO" doc:name="call-entry log" doc:id="d9dc1efd-6d50-4d46-8a45-5086774493d2" message="${sm.common.log.message.call.entry}" category="com.sm.common" />
+	</sub-flow>
+	<sub-flow name="call-exit-logger-flow" doc:id="1a61113b-99a1-4051-8696-31104b7cc5b1" >
+		<logger level="INFO" doc:name="call-exit log" doc:id="9eb59b7b-ec70-4608-8f4e-a1f2d25d773e" message="${sm.common.log.message.call.exit}" category="com.sm.common" />
+	</sub-flow>
+	<sub-flow name="call-process-logger-flow" doc:id="085aed58-4ff9-45a1-81d7-29dc77ed1d59" >
+		<logger level="INFO" doc:name="process log" doc:id="59c1709b-f21c-4717-9dcd-05338ed68991" message="${sm.common.log.message.process}" category="com.sm.common" />
+	</sub-flow>
+	<sub-flow name="call-debug-exit-logger-flow" doc:id="825fdced-0b9b-4ded-b4da-982b8520ec73" >
+		<logger level="DEBUG" doc:name="debug call exit log" doc:id="94f8eb83-5fd6-474f-8383-4c5e1fec3f8f" message="${sm.common.log.message.call.exit.debug}" category="com.sm.common" />
+	</sub-flow>
+	<sub-flow name="call-debug-entry-logger-flow" doc:id="3955f3d2-ce59-41c5-912a-1d8ef18e16ab" >
+		<logger level="DEBUG" doc:name="debug call entry log" doc:id="b1c1d63f-bafb-48ea-8075-b2a785bc9045" message="${sm.common.log.message.call.entry.debug}" category="com.sm.common" />
+	</sub-flow>
+	<sub-flow name="call-warn-logger-flow" doc:id="faae8321-f14e-498d-85eb-21ff33c7cc09" >
+		<logger level="WARN" doc:name="warn log" doc:id="fc8a04af-df80-4f8b-9106-f191cf6cfd51" message="${sm.common.log.message.warn}" category="com.sm.common" />
+	</sub-flow>
+    <sub-flow name="call-error-logger-flow" doc:id="322661c0-2d31-4d47-9644-1ba40de5ecf6" >
+		<logger level="ERROR" doc:name="error log" doc:id="6733ac8f-6b2b-4459-97fc-457fb33ba0d9" message="${sm.common.log.message.error}" category="com.sm.common" />
+	</sub-flow>
+	<sub-flow name="call-payload-logger-flow" doc:id="a65c0d2f-31b9-4a20-95e1-e15c9d179d99" >
+		<logger level="INFO" doc:name="payload logger" doc:id="c5e00f5d-a7ee-43ae-b279-53a2ccbf8eab" message="#[payload]" category="com.sm.common" />
+	</sub-flow>
+</mule>
